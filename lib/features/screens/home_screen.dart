@@ -18,18 +18,12 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Center(
         child: Column(
           children: [
-            Flexible(
-              flex: 3,
-              child: Container(
+            Container(
                 color: Colors.deepPurple,
               ),
-            ),
-            Flexible(
-              flex: 1,
-              child: Container(
+            Container(
                 color: Colors.lightGreenAccent,
               ),
-            ),
           ],
         ),
       ),
