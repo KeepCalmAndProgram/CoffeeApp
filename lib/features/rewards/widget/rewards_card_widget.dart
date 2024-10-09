@@ -6,28 +6,48 @@ class RewardsCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 12,
-      width: 12,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(25.0),
-        color: Theme.of(context).colorScheme.secondary,
+    return Card(
+      elevation: 10,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20.0),
       ),
-      child: Stack(
-        children: [
-          Positioned(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("here you image"),
+      color: Colors.black,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        child: Row(
+          children: [
+            ClipRRect(
+              borderRadius: const BorderRadius.only(
+                topRight: Radius.circular(20),
+                topLeft: Radius.circular(20),
+              ),
+              child: Image.asset(
+                'assets/image/test.jpeg',
+                height: 50,
+                //fit: BoxFit.cover,
+                width: 50,
+              ),
             ),
-          ),
-          Positioned.fill(
-            child: Padding(
-              padding: const EdgeInsets.all(6.0),
-              child: Text("text reward"),
+            Text(
+              'loren ipsum',
+              style: TextStyle(color: Colors.white),
             ),
-          ),
-        ],
+            /*const ListTile(
+              title: Text(
+                '10 Successfully Made Coffees',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              subtitle: Text(
+                'Loren ipsum loren ipsum Loren ipsum Loren ipsum Loren ipsum Loren ipsum Loren ipsum',
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
+              ),
+            ),*/
+          ],
+        ),
       ),
     );
   }

@@ -1,5 +1,8 @@
+import 'package:coffee_app/features/rewards/widget/rewards_card_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../helpers/line_draw.dart';
 
 class RewardsScreen extends StatefulWidget {
   const RewardsScreen({Key? key}) : super(key: key);
@@ -24,15 +27,17 @@ class _RewardsScreenState extends State<RewardsScreen> {
           children: [
             Text("Point Balance"),
             Text("0"),
-            Row(
-              children: [
-                Container()
-              ],
-            )
+            CustomPaint(
+              size: Size(200, 100),
+              painter: LineDraw(progress: 1),
+            ),
+            RewardsCardWidget(),
+            RewardsCardWidget(),
+            RewardsCardWidget(),
+            RewardsCardWidget(),
           ],
         ),
       ),
-
     );
   }
 }

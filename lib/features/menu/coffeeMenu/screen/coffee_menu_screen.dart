@@ -22,9 +22,9 @@ class _CoffeeMenuScreenState extends State<CoffeeMenuScreen> {
       ),
       body: Column(
         children: [
-          CoffeeCardWidget();
-          CoffeeCardWidget();
-          CoffeeCardWidget();
+          CoffeeCardWidget(),
+          CoffeeCardWidget(),
+          CoffeeCardWidget(),
         ],
       )
     );
