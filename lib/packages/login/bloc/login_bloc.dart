@@ -7,7 +7,6 @@ import '../models/password.dart';
 import '../models/username.dart';
 
 part 'login_event.dart';
-
 part 'login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {

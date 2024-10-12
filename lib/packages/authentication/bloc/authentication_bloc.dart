@@ -15,7 +15,7 @@ class AuthenticationBloc
     required AuthenticationRepository authenticationRepository,
     required UserRepository userRepository,
   })  : _authenticationRepository = authenticationRepository,
-        _userRepisitory = userRepository,
+        _userRepository = userRepository,
         super(const AuthenticationState.unknown()) {
     on<AuthenticationSubscriptionRequested>(_onSubscriptionRequested);
     on<AuthenticationLogoutPressed>(_onLogoutPressed);
